@@ -2,6 +2,12 @@
   <div class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
     <!-- API de Fechas -->
     <div class="bg-white p-8 rounded shadow-md mb-8">
+      <div class="items-center0">
+        <img :src="ImageURL" alt="img" class=" w-40 h-40 mx-auto mt-7"/>
+        <h1 class="text-3xl font-bold mb-4 text-center">Sit Motul</h1>
+        <h1 class="text-2xl mb-5 text-center">Estado de la evaluación tutor del 2023b <br>
+          al Domingo 03 de Diciembre de 2023</h1>
+      </div>
       <h1 class="text-3xl font-bold mb-4">Sit Motul - Fechas</h1>
       <div v-if="apii && apii.periodo" class="text-lg font-semibold mb-4">
         Periodo: {{ apii.periodo }}
@@ -86,6 +92,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import dayjs from 'dayjs';
+import ImageURL from '@/assets/logoSitmotul.svg'
 
 // API de Fechas
 const apii = ref({
@@ -143,5 +150,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Agrega estilos adicionales si es necesario */
+
 </style>
